@@ -1,101 +1,84 @@
 (function () {
-  if (!window.gsap || !window.CustomEase || !window.SplitText) return;
-
-  const gsap = window.gsap;
-  const CustomEase = window.CustomEase;
-  const SplitText = window.SplitText;
-
-  gsap.registerPlugin(CustomEase, SplitText);
-  CustomEase.create("loader", "0.65, 0.01, 0.05, 0.99");
-
-  function initLogoRevealLoader() {
-    const wrap = document.querySelector("[data-load-wrap]");
-    if (!wrap) return;
-
-    const container = wrap.querySelector("[data-load-container]");
-    const bg = wrap.querySelector("[data-load-bg]");
-    const progressBar = wrap.querySelector("[data-load-progress]");
-    const logo = wrap.querySelector("[data-load-logo]");
-    const textElements = Array.from(wrap.querySelectorAll("[data-load-text]"));
-    const resetTargets = Array.from(wrap.querySelectorAll("[data-load-reset]:not([data-load-text])"));
-
-    const loadTimeline = gsap
-      .timeline({
-        defaults: {
-          ease: "loader",
-          duration: 3,
-        },
-      })
-      .set(wrap, { display: "block" })
-      .to(progressBar, { scaleX: 1 })
-      .to(logo, { clipPath: "inset(0% 0% 0% 0%)" }, "<")
-      .to(container, { autoAlpha: 0, duration: 0.5 })
-      .to(progressBar, { scaleX: 0, transformOrigin: "right center", duration: 0.5 }, "<")
-      .add("hideContent", "<")
-      .to(bg, { yPercent: -101, duration: 1 }, "hideContent")
-      .call(() => {
-        document.body.dataset.proposalReady = "true";
-        window.dispatchEvent(new CustomEvent("proposal:ready"));
-      })
-      .set(wrap, { display: "none" });
-
-    if (resetTargets.length) {
-      loadTimeline.set(resetTargets, { autoAlpha: 1 }, 0);
-    }
-
-    if (textElements.length >= 2) {
-      const firstWord = new SplitText(textElements[0], { type: "lines,chars", mask: "lines" });
-      const secondWord = new SplitText(textElements[1], { type: "lines,chars", mask: "lines" });
-
-      gsap.set([firstWord.chars, secondWord.chars], { autoAlpha: 0, yPercent: 125 });
-      gsap.set(textElements, { autoAlpha: 1 });
-
-      loadTimeline.to(
-        firstWord.chars,
-        {
-          autoAlpha: 1,
-          yPercent: 0,
-          duration: 0.6,
-          stagger: { each: 0.02 },
-        },
-        0,
-      );
-
-      loadTimeline.to(
-        firstWord.chars,
-        {
-          autoAlpha: 0,
-          yPercent: -125,
-          duration: 0.4,
-          stagger: { each: 0.02 },
-        },
-        ">+=0.4",
-      );
-
-      loadTimeline.to(
-        secondWord.chars,
-        {
-          autoAlpha: 1,
-          yPercent: 0,
-          duration: 0.6,
-          stagger: { each: 0.02 },
-        },
-        "<",
-      );
-
-      loadTimeline.to(
-        secondWord.chars,
-        {
-          autoAlpha: 0,
-          yPercent: -125,
-          duration: 0.4,
-          stagger: { each: 0.02 },
-        },
-        "hideContent-=0.5",
-      );
-    }
+  function signalReady() {
+    document.documentElement.style.overflow = "";
+    document.body.dataset.proposalReady = "true";
+    window.dispatchEvent(new CustomEvent("proposal:ready"));
   }
 
-  if (document.body.dataset.reactHydrated === "true") initLogoRevealLoader();
-  else window.addEventListener("proposal:hydrated", initLogoRevealLoader, { once: true });
+  function initCrispImageLoader() {
+    const overlay = document.querySelector("[data-load-wrap]");
+    if (!overlay) {
+      signalReady();
+      return;
+    }
+
+    if (!window.gsap || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      overlay.style.display = "none";
+      signalReady();
+      return;
+    }
+
+    const gsap = window.gsap;
+    const duplicateTiles = Array.from(overlay.querySelectorAll(".crisp-loader__group.is--duplicate .crisp-loader__single"));
+    const relativeTiles = Array.from(overlay.querySelectorAll(".crisp-loader__group.is--relative .crisp-loader__single"));
+    const scaleDownImages = Array.from(overlay.querySelectorAll(".crisp-loader__cover-img.is--scale-down"));
+    const selectedMedia = overlay.querySelector(".crisp-loader__media.is--scaling");
+    const groups = overlay.querySelector(".crisp-loader__groups");
+
+    if (!duplicateTiles.length || !relativeTiles.length || !selectedMedia || !groups) {
+      overlay.style.display = "none";
+      signalReady();
+      return;
+    }
+
+    document.documentElement.style.overflow = "hidden";
+    overlay.classList.remove("is--hidden");
+
+    const lockSelectedMedia = function () {
+      const rect = selectedMedia.getBoundingClientRect();
+      const tile = selectedMedia.parentElement;
+
+      // Keep the strip layout stable, then move the expanding frame outside
+      // its transformed parent so fixed positioning stays tied to the viewport.
+      if (tile) {
+        tile.style.width = rect.width + "px";
+        tile.style.height = rect.height + "px";
+      }
+      groups.style.overflow = "visible";
+      overlay.appendChild(selectedMedia);
+      Object.assign(selectedMedia.style, {
+        position: "fixed",
+        left: rect.left + "px",
+        top: rect.top + "px",
+        width: rect.width + "px",
+        height: rect.height + "px",
+        margin: "0",
+      });
+    };
+
+    gsap
+      .timeline({ defaults: { ease: "expo.inOut" } })
+      .fromTo(duplicateTiles, { xPercent: 520 }, { xPercent: -520, duration: 1.8, stagger: 0.055 }, 0)
+      .fromTo(relativeTiles, { xPercent: 520 }, { xPercent: 0, duration: 1.65, stagger: 0.055 }, 0.32)
+      .to(scaleDownImages, {
+        scale: 0.52,
+        duration: 0.75,
+        stagger: { each: 0.045, from: "edges", ease: "none" },
+      }, "-=0.18")
+      .call(lockSelectedMedia)
+      .to(selectedMedia, {
+        left: 0,
+        top: 0,
+        width: "100vw",
+        height: "100dvh",
+        borderRadius: 0,
+        duration: 1.25,
+      })
+      .to(overlay, { autoAlpha: 0, duration: 0.42, ease: "power1.inOut" }, ">-=0.05")
+      .call(signalReady)
+      .set(overlay, { display: "none" });
+  }
+
+  if (document.body.dataset.reactHydrated === "true") initCrispImageLoader();
+  else window.addEventListener("proposal:hydrated", initCrispImageLoader, { once: true });
 })();

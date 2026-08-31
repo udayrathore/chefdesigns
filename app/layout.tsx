@@ -9,18 +9,18 @@ const anton = Anton({ variable: "--font-anton", subsets: ["latin"], weight: "400
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.com"),
-  title: "Client — Proposal",
-  description: "A reusable proposal website template.",
+  title: "Chef Designs | Website Proposal",
+  description: "A proposed corporate and product catalogue website for Chef Designs.",
   openGraph: {
-    title: "Client Proposal",
-    description: "A reusable proposal website template.",
+    title: "Chef Designs Website Proposal",
+    description: "A proposed corporate and product catalogue website for Chef Designs.",
     type: "website",
-    images: [{ url: "/placeholder-hero.svg", width: 1200, height: 630, alt: "Client proposal" }],
+    images: [{ url: "/placeholder-hero.svg", width: 1200, height: 630, alt: "Chef Designs website proposal" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Client Proposal",
-    description: "A reusable proposal website template.",
+    title: "Chef Designs Website Proposal",
+    description: "A proposed corporate and product catalogue website for Chef Designs.",
     images: ["/placeholder-hero.svg"],
   },
 };

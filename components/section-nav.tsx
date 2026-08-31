@@ -1,7 +1,7 @@
 const items = [
   ["overview", "Overview"],
   ["process", "Process"],
-  ["platform", "Platform"],
+  ["platform", "Website"],
   ["boundaries", "Boundaries"],
   ["technical", "Tech Stack"],
   ["timeline", "Pricing"],

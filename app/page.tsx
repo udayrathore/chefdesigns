@@ -5,197 +5,145 @@ import { AgencyDetails } from "@/components/agency-details";
 const stages = [
   {
     number: "01",
-    date: "31 Aug – 13 Sep 2026",
-    title: "Research & Product Definition",
-    duration: "2 weeks",
+    date: "10 – 16 Sep 2026",
+    title: "Research",
+    duration: "1 week",
     paragraphs: [
-      "We will begin by understanding the complete system, its users, dependencies and the actions that may need to take place across the platform, both within Phase One and in future iterations.",
-      "The research phase will establish the core product structure and identify the information, fields, workflows and dependencies required across customers, vendors and the ConnectX administration team.",
-      "A key objective will be to ensure that the platform is not approached simply as a marketplace for venues or individual vendors. The proposed experience will instead begin functioning as an event planning platform from Phase One, helping users understand what needs to happen, what has been planned, what has been booked and what remains to be completed.",
+      "We will study Chef Designs' ideal clientele, competitors and the broader market in which the company operates.",
+      "This will help us understand how similar businesses position themselves, what works within the category and what opportunities exist for the proposed website.",
     ],
-    deliverable: "Product structure, functional mapping and low-fidelity product direction.",
+    deliverable: "Research findings and proposed positioning direction.",
   },
   {
     number: "02",
-    date: "31 Aug – 13 Sep 2026",
+    date: "17 – 23 Sep 2026",
     title: "Wireframing & User Experience",
-    duration: "Included within the initial product definition and wireframing phase",
+    duration: "1 week",
     paragraphs: [
-      "Based on the research, we will map the primary user journeys and translate the proposed product structure into low-fidelity wireframes.",
-      "This stage will define the key screens, data points, fields, navigation and control flows across the customer, vendor and administrative interfaces.",
-      "The experience will account for event creation, sub-events, vendor discovery, vendor selection, proposals, negotiations, notifications and event progress. We will also define how users can visualise the overall state of their event and understand the completion of key planning activities.",
-      "The wireframes will also help establish how the platform can evolve beyond the initial implementation without requiring the underlying product structure to be rebuilt.",
+      "We will define the sitemap, page structure, wireframes, user flows and key user journeys.",
+      "This will help establish how different audiences should navigate the proposed website and how the service and product sides of the business should work together.",
     ],
-    deliverable: "Wireframes and user-flow definitions.",
+    deliverable: "Proposed sitemap, wireframes and user-flow definitions.",
   },
   {
     number: "03",
-    date: "4 Sep – Mid-Oct 2026",
-    title: "Design & Prototyping",
-    duration: "A little over one month",
+    date: "24 Sep – 7 Oct 2026",
+    title: "Visual Design",
+    duration: "2 weeks",
     paragraphs: [
-      "Once the product structure and wireframes have been established, we will develop the visual language and interface design for the platform.",
-      "This will include typography, layout, interface components, graphics, visual hierarchy and interaction patterns. Particular attention will be given to making a data-heavy application understandable and accessible, with information presented in a way that allows users to quickly understand what is happening within their event.",
-      "The primary usage environment is expected to be desktop, while the interface will also be designed responsively for mobile devices. Mobile layouts will focus on condensing event information and navigation without compromising usability.",
-      "The designs will be presented to the Client for review and feedback. Once the design direction is sufficiently defined, the relevant screens will be frozen for development.",
+      "Based on the proposed structure and wireframes, we will develop the visual direction and interface design in Figma.",
+      "This will cover the proposed website's typography, layout, visual hierarchy, imagery, product presentation and responsive behaviour.",
+      "The project includes up to four consolidated rounds of design revisions.",
     ],
-    deliverable: "High-fidelity interface designs and interactive prototypes.",
+    deliverable: "High-fidelity responsive interface designs in Figma.",
   },
   {
     number: "04",
-    date: "21 Sep – Mid-Nov 2026",
-    title: "Development",
-    duration: "Runs progressively through the development period",
+    date: "8 Oct – 10 Nov 2026",
+    title: "Development & Testing",
+    duration: "4 weeks",
     paragraphs: [
-      "Development will begin progressively alongside the product definition and design process rather than only after the visual design stage is complete.",
-      "Because the proposed platform is backend and workflow heavy, the underlying systems, dashboards, vendor structures, proposal mechanisms, communications and supporting workflows will begin taking shape from the early stages of the project.",
-      "Once the interface design is established, front-end development will proceed alongside the backend implementation.",
-      "Development will focus on responsive behaviour, data-heavy interfaces, interaction patterns and the practical usability of the platform across its different user types.",
+      "Once the proposed designs are confirmed for development, we will proceed with responsive website development, implementation of the product catalogue and enquiry workflows, and the proposed CMS functionality.",
+      "The proposed website will be deployed to a staging environment for User Acceptance Testing before launch.",
     ],
-    deliverable: "Functional web application on staging environment.",
-  },
-  {
-    number: "05",
-    date: "Mid-November 2026",
-    title: "Testing & Launch",
-    duration: "Included within the overall project timeline",
-    paragraphs: [
-      "The completed platform will be tested across its core workflows and relevant devices before launch. A staging environment will be used for review and User Acceptance Testing.",
-      "Following completion of testing and agreed fixes, the platform will be prepared for production deployment and launch.",
-    ],
-    deliverable: "Tested production-ready web application.",
-    uat: "The project includes up to 2 consolidated rounds of UAT feedback and fixes during the staging phase. Bugs are limited to deviations from the approved designs or agreed functionality. New features, enhancements or changes in scope will be treated separately.",
+    deliverable: "Responsive proposed website on a staging environment for testing.",
   },
 ];
 
-const scheduleWeeks = ["31 Aug", "7 Sep", "14 Sep", "21 Sep", "28 Sep", "5 Oct", "12 Oct", "19 Oct", "26 Oct", "2 Nov", "9 Nov"];
+const scheduleWeeks = ["10 Sep", "17 Sep", "24 Sep", "1 Oct", "8 Oct", "15 Oct", "22 Oct", "29 Oct"];
 
 const scheduleTracks = [
-  { number: "01", title: "Research & Product Definition", start: 1, span: 2 },
-  { number: "02", title: "Wireframing & User Experience", start: 1, span: 2 },
-  { number: "03", title: "Design & Prototyping", start: 1, span: 7 },
-  { number: "04", title: "Development", start: 4, span: 8 },
-  { number: "05", title: "Testing & Launch", start: 11, span: 1 },
+  { number: "01", title: "Research", start: 1, span: 1 },
+  { number: "02", title: "Wireframing", start: 2, span: 1 },
+  { number: "03", title: "Visual Design", start: 3, span: 2 },
+  { number: "04", title: "Development & Testing", start: 5, span: 4 },
 ];
 
 const scopeItems = [
   {
     number: "01",
-    title: "Customer Experience",
-    paragraphs: ["The proposed platform gives customers a central place to define their event requirements, discover suitable vendors and venues, manage enquiries and track their planning progress."],
+    title: "Hospitality Solutions",
+    paragraphs: ["The proposed website will showcase Chef Designs' capabilities across:"],
     list: [
-      "Create an event and define its key details.",
-      "Break the event into individual sub-events, functions or ceremonies.",
-      "Define requirements such as budget, location, event type, preferred style and other relevant preferences.",
-      "Search for vendors based on their specific requirements.",
-      "View only vendors whose profile, specialisation and availability are relevant to those requirements.",
-      "Explore vendor profiles, portfolios and relevant information.",
-      "Enquire with vendors and receive proposals.",
-      "Participate in proposal and negotiation workflows.",
-      "Track vendors and services that have been shortlisted or finalised.",
-      "Monitor the overall progress of their event.",
-      "Receive relevant notifications throughout the planning process.",
+      "Hotel interiors",
+      "Back-of-house setup",
+      "Kitchen planning and setup",
+      "Consulting",
+      "Kitchen sourcing",
+      "Other proposed hospitality services",
     ],
     closingParagraphs: [
-      "The same principle applies to venue discovery. Customers can specify requirements such as destination, event dates, guest requirements, budget, event type, accommodation needs and property preferences, allowing the platform to surface relevant venue options through an interactive, parameter-based search experience.",
-      "Customers can explore detailed venue profiles, view relevant availability, shortlist properties they are interested in and then initiate an enquiry. Where the requested dates are unavailable, the platform can surface suitable alternative date combinations based on available venue data.",
-      "This allows customers to progressively narrow down a larger set of venues into a shortlist of preferred properties before moving into enquiry, proposal and negotiation.",
-      "The proposed customer experience therefore moves beyond simple vendor browsing. It establishes the foundation for progressively more relevant matching and recommendations as the platform evolves.",
+      "A dedicated projects and portfolio section will allow Chef Designs to demonstrate relevant work and experience.",
     ],
   },
   {
     number: "02",
-    title: "Vendor Experience",
-    paragraphs: ["The proposed platform will give vendors a structured environment to present their services, define their specialisations and manage their availability."],
-    list: [
-      "Maintain a structured vendor profile.",
-      "Define their services and areas of specialisation.",
-      "Specify category-specific attributes. For example, photographers may identify their preferred photography styles.",
-      "Manage availability by blocking dates on their calendar.",
-      "Receive enquiries based on relevant event and service requirements.",
-      "Review customer and sub-event requirements.",
-      "Respond with proposals.",
-      "Participate in proposal and negotiation workflows.",
-      "Receive relevant notifications.",
-      "Track the status of their customer interactions.",
+    title: "Products & Trade",
+    paragraphs: [
+      "The proposed website will include a structured catalogue of Chef Designs' professional kitchen products.",
+      "Products will be organised into relevant categories, and individual product pages will allow visitors to explore product information, imagery, specifications and other relevant details.",
     ],
     closingParagraphs: [
-      "Vendor information will actively contribute to the matching process. Specialisation, availability, location, budget suitability and other relevant attributes can influence which vendors are surfaced to a customer.",
+      "The proposed catalogue is intended to support a large and growing product range.",
     ],
   },
   {
     number: "03",
-    title: "Venue Owner Experience",
+    title: "RFQ & Product Enquiries",
     paragraphs: [
-      "Venue booking will be treated as a dedicated module within the platform.",
-      "Although venues form part of the wider vendor ecosystem, the nature of venue enquiries and negotiations makes them sufficiently different to warrant a dedicated experience.",
-      "The proposed venue module will support destination weddings as well as city weddings, corporate events and other events where venue selection may involve multiple functions, dates, accommodation requirements and commercial negotiations.",
-      "The venue discovery experience will allow customers to search and filter properties based on relevant event parameters, explore detailed property profiles, review availability, shortlist suitable venues and then initiate enquiries and proposal workflows.",
-    ],
-    list: [
-      "Maintain a structured property profile.",
-      "Present property information, imagery, facilities and relevant event capabilities.",
-      "Define the types of events and functions the property can accommodate.",
-      "Manage relevant availability.",
-      "Receive enquiries based on customer event requirements.",
-      "Review event dates, requirements and sub-event information.",
-      "Respond to venue enquiries.",
-      "Submit proposals and commercial responses.",
-      "Participate in negotiation workflows.",
-      "Receive notifications and track the status of active enquiries.",
-    ],
-    closingParagraphs: [
-      "Unlike a conventional hotel booking platform, the proposed venue workflow is centred around enquiry, proposal and negotiation rather than instant booking.",
-      "Customers can review available venue options, explore their profiles, shortlist preferred properties, request quotes or send enquiries, and proceed into proposal and negotiation workflows. Negotiations may take place directly between the customer and venue or involve the ConnectX team where required.",
-      "Where requested dates are unavailable, suitable alternative dates may also be surfaced based on the availability information available to the platform. This is particularly relevant for events where multiple functions, dates, accommodation requirements and property-specific considerations need to be coordinated.",
-      "Venue availability and alternative-date recommendations will be based on availability data made available to the platform through the agreed data source or vendor/ConnectX inputs; third-party hotel inventory, PMS or channel-manager integrations are not implied unless separately specified.",
+      "Visitors will be able to explore products and submit enquiries for specific products.",
+      "The proposed RFQ flow will allow visitors to identify the products they are interested in and submit their contact details and requirements. These enquiries will be routed to the designated Chef Designs email or inbox.",
+      "This is an enquiry-generation system, not an e-commerce system.",
     ],
   },
   {
     number: "04",
-    title: "ConnectX Operations",
+    title: "White-Label / Trade Enquiries",
     paragraphs: [
-      "ConnectX will have a central operational layer connecting customers, vendors and venue owners.",
-      "The proposed administration interface will allow ConnectX to:",
+      "The proposed website will provide a clear pathway for vendors and businesses interested in sourcing or white-labelling Chef Designs' products.",
+      "Visitors will be able to enquire about relevant products and commercial opportunities directly through the proposed website.",
     ],
-    list: [
-      "Manage and oversee customers, vendors and venue owners.",
-      "View event, sub-event, vendor and venue information.",
-      "Monitor enquiries, proposals and negotiations.",
-      "Participate in or mediate customer, vendor and venue interactions.",
-      "Track event, venue, enquiry, proposal and negotiation progress.",
-      "Manage relevant platform data and workflows.",
-      "Intervene when a customer requires assistance.",
-      "Coordinate venue enquiries, proposals and negotiations where required, including cases where ConnectX participates directly between the customer and venue.",
-      "Support hybrid or offline workflows where ConnectX becomes directly involved in delivering or coordinating a service.",
-    ],
-    closingParagraphs: [
-      "This operational layer is particularly important for venue booking, where ConnectX may need to facilitate communication and negotiation between the customer and property rather than simply allowing the two parties to transact independently.",
+  },
+  {
+    number: "05",
+    title: "WhatsApp Integration",
+    paragraphs: [
+      "WhatsApp is proposed as a supporting enquiry channel at relevant points across the website, particularly for product and general enquiries.",
+      "It will remain a supporting touchpoint rather than a visually prominent feature.",
     ],
   },
 ];
 
 const boundaries = [
-  "Financial transactions are proposed to remain outside the platform during Phase One. The platform will support vendor discovery, enquiries, proposals and negotiations, but will not process or accept payments from users in this phase.",
-  "Proposal and negotiation workflows are included within the initial platform concept.",
-  "Customers can choose how they want to work with ConnectX — through the platform independently, through a hybrid model with ConnectX support, or by getting in touch with the ConnectX team for assistance. The platform is designed to allow customers to self-serve where they are comfortable, while providing a clear option to seek ConnectX support when they need help.",
-  "AI-assisted functionality is reserved for a future phase and is not included in the current Phase One implementation.",
-  "Advanced operational workflows and additional automation can be scoped separately as the product evolves.",
+  "Shopping cart",
+  "Checkout",
+  "Online payments",
+  "Automated ordering",
+  "Inventory management",
+  "Customer accounts",
+  "E-commerce order management",
 ];
 
 const technical = [
   "Laravel",
-  "Filament",
-  "Livewire",
-  "Alpine JS",
-  "MYSQL",
+  "TailwindCSS",
+  "GSAP",
+  "Supporting JavaScript technologies",
+];
+
+const loaderImages = [
+  "/chef-designs-bar-interior.avif",
+  "/chef-designs-blue-lounge.avif",
+  "/chef-designs-interior-kitchen.avif",
+  "/chef-designs-light-lounge.avif",
+  "/chef-designs-wood-interior.avif",
 ];
 
 const support = [
-  "The initial post-launch support period will cover bug fixes relating to the delivered Phase One functionality for one month after go-live.",
-  "A bug is understood as a deviation from the approved design or agreed functionality, rather than a new feature or enhancement.",
-  "New functionality, additional modules, significant workflow changes or enhancements requested after delivery will be scoped separately.",
-  "ArtWorksIT proposes to recommend, configure and manage the hosting infrastructure based on the platform's load, requirements and assets. The appropriate server environment will be assessed as part of the implementation.",
+  "The proposed scope includes one month of post-launch bug-fix support.",
+  "Bugs are issues where delivered functionality deviates from the proposed design or proposed scope.",
+  "New features, enhancements or additional development are outside the proposed scope and will be scoped separately.",
+  "ArtWorksIT proposes to recommend, configure and manage the hosting infrastructure based on the proposed website's load, requirements and assets. The appropriate server environment will be assessed as part of the implementation.",
 ];
 
 const terms = [
@@ -225,12 +173,12 @@ const terms = [
   },
   {
     title: "Assumptions",
-    body: "The Client is responsible for providing the final requirements, business rules, content guidelines and necessary assets. Data entry and migration of extensive vendor or event data will be the responsibility of the Client unless specifically included in the scope. Hosting and infrastructure management will be defined as part of the final implementation and commercial arrangement. The platform will be developed in phases, and functionality not explicitly included in Phase One will be considered for subsequent phases.",
+    body: "The Client is responsible for providing the final requirements, business rules, content guidelines and necessary assets. Data entry and migration of extensive product, project or service data will be the responsibility of the Client unless specifically included in the proposed scope. Hosting and infrastructure management will be defined as part of the proposed implementation and commercial arrangement. Functionality not explicitly included in the proposed scope may be considered for a subsequent phase.",
   },
 ];
 
 function Logo({ inverse = false }: { inverse?: boolean }) {
-  return <img className={inverse ? "brand-logo inverse" : "brand-logo"} src="/placeholder-logo.svg" alt="Client logo" width="201" height="61" />;
+  return <img className={inverse ? "brand-logo inverse" : "brand-logo"} src="/chef-designs-logo-white.svg" alt="Chef Designs logo" width="287" height="72" />;
 }
 
 function DeliverableIcon({ stage }: { stage: string }) {
@@ -248,30 +196,37 @@ function DeliverableIcon({ stage }: { stage: string }) {
 export default function Home() {
   return (
     <>
-      <div data-load-wrap className="loader">
-        <div data-load-bg className="loader__bg">
-          <div data-load-progress className="loader__bg-bar" />
-        </div>
-        <div data-load-container className="loader__container">
-          <div className="loader__logo-wrap">
-            <div className="loader__logo-item is--base">
-              <img src="/loader-logo.svg" alt="" className="loader__logo-img" />
+      <div data-load-wrap className="crisp-loader-overlay is--hidden" aria-hidden="true">
+        <div className="crisp-loader__wrap">
+          <div className="crisp-loader__groups">
+            <div className="crisp-loader__group is--duplicate">
+              {loaderImages.map((src) => (
+                <div className="crisp-loader__single" key={`duplicate-${src}`}>
+                  <div className="crisp-loader__media">
+                    <img src={src} alt="" className="crisp-loader__cover-img" />
+                  </div>
+                </div>
+              ))}
             </div>
-            <div data-load-logo className="loader__logo-item is--top">
-              <img src="/loader-logo.svg" alt="Client and studio" className="loader__logo-img" />
+            <div className="crisp-loader__group is--relative">
+              {loaderImages.map((src, index) => (
+                <div className="crisp-loader__single" key={src}>
+                  <div className={index === 2 ? "crisp-loader__media is--scaling is--radius" : "crisp-loader__media"}>
+                    <img src={src} alt="" className={index === 2 ? "crisp-loader__cover-img" : "crisp-loader__cover-img is--scale-down"} />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="loader__text-wrap">
-            <span data-load-text data-load-reset className="loader__text-el">Hold tight</span>
-            <span data-load-text data-load-reset className="loader__text-el">Hi there!</span>
-          </div>
+          <div className="crisp-loader__fade" />
+          <div className="crisp-loader__fade is--duplicate" />
         </div>
       </div>
       <main>
       <header className="masthead">
-        <a className="logo-link" href="#top" aria-label="ConnectX proposal home"><Logo /></a>
+        <a className="logo-link" href="#top" aria-label="Chef Designs proposal home"><Logo /></a>
         <p>Proposal</p>
-        <p className="masthead-date">30 August 2026</p>
+        <p className="masthead-date">31 August 2026</p>
       </header>
 
       <section className="hero" id="top">
@@ -279,14 +234,14 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">Proposed</p>
           <h1 data-hero-heading>
-            Wedding &amp;<br className="hero-break-mobile" /> Corporate<br className="hero-break-desktop" /> Event<br className="hero-break-mobile" /> Planning Platform
+            Hospitality<br className="hero-break-mobile" /> Solutions &amp;<br className="hero-break-desktop" /> Professional<br className="hero-break-mobile" /> Kitchen Products
           </h1>
         </div>
         <div className="hero-meta">
           <div><span>Prepared by</span><strong>ArtWorksIT</strong></div>
-          <div><span>Project start</span><strong>31st August 2026</strong></div>
-          <div><span>Project completion</span><strong>Mid-November 2026</strong></div>
-          <div><span>Project timeline</span><strong>10 to 11 weeks</strong></div>
+          <div><span>Project start</span><strong>10th September 2026</strong></div>
+          <div><span>Project completion</span><strong>Approximately 10th November 2026</strong></div>
+          <div><span>Project timeline</span><strong>2 months</strong></div>
         </div>
       </section>
 
@@ -297,15 +252,14 @@ export default function Home() {
         <div className="section-content intro-grid">
           <h2>Project Objective</h2>
           <div className="measure">
-            <p className="lead">ArtWorksIT proposes to design and develop Phase One of a web-based event planning and vendor management platform for ConnectX.</p>
-            <p>The proposed platform will allow users to create and plan events, define individual sub-events, discover and evaluate venues and vendors through parameter-based search, check relevant availability, shortlist options, facilitate enquiries, proposals and negotiations, and track the progress of their event through a centralised interface.</p>
-            <p>The initial phase is intended to establish the core planning and marketplace infrastructure while keeping the system flexible enough to support future enhancements, including deeper operational workflows, hybrid or offline service models, and AI-assisted functionality.</p>
-            <p>The platform is proposed to support both wedding and corporate events. While the underlying planning flow will remain similar, the experience can accommodate the different requirements and contexts of each event type.</p>
+            <p className="lead">Chef Designs is a hospitality-focused company working across hotel interiors, back-of-house setup, consulting, kitchen solutions and the manufacture and sale of professional kitchen products.</p>
+            <p>The proposed website will bring these capabilities together under one umbrella website, allowing Chef Designs to showcase its expertise to hospitality businesses while also presenting its product range to vendors and businesses interested in sourcing and white-labelling these products.</p>
+            <p>The proposed website will serve two primary audiences: hospitality businesses looking for Chef Designs&apos; services and expertise, and vendors and businesses interested in sourcing or white-labelling Chef Designs&apos; products.</p>
           </div>
         </div>
         <div className="founders-note">
-          <span>Co-Founders</span>
-          <p>Prranit Bhanne and Mukesh Tekchandani</p>
+          <span>Client contact</span>
+          <p>Vishal Sharma</p>
         </div>
       </section>
 
@@ -313,14 +267,14 @@ export default function Home() {
         <div className="section-index">02 / Project Scope &amp; Timelines</div>
         <div className="section-content section-heading">
           <h2>Project Scope &amp; Timelines</h2>
-          <p>A key objective will be to ensure that the platform is not approached simply as a marketplace for venues or individual vendors. The proposed experience will instead begin functioning as an event planning platform from Phase One.</p>
+          <p>We propose a structured process that brings the service and product sides of Chef Designs together within one clear, responsive website experience.</p>
         </div>
         <div className="timeline-summary">
-          <div><span>Proposed project start</span><strong>31st August 2026</strong></div>
-          <div><span>Proposed project completion</span><strong>Mid-November 2026</strong></div>
-          <div><span>Project timeline</span><strong>Approximately 10 to 11 weeks</strong></div>
+          <div><span>Proposed project start</span><strong>10th September 2026</strong></div>
+          <div><span>Proposed project completion</span><strong>Approximately 10th November 2026</strong></div>
+          <div><span>Project timeline</span><strong>2 months</strong></div>
         </div>
-        <div className="parallel-timeline" aria-label="Parallel project schedule from 31 August to mid-November 2026">
+        <div className="parallel-timeline" aria-label="Proposed project schedule from 10 September to approximately 10 November 2026">
           <div className="schedule-scroll">
             <div className="schedule-chart">
               <div className="schedule-corner">Phase</div>
@@ -337,7 +291,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <p className="schedule-note">The parallel tracks indicate where project stages overlap.</p>
+          <p className="schedule-note">The proposed timeline covers research in Week 1, wireframing in Week 2, visual design in Weeks 3 to 4, and development and testing in Weeks 5 to 8.</p>
         </div>
         <div className="stage-list" data-step-timeline-init="" data-step-timeline-activation="0.5">
           <div className="step-timeline__line" data-step-timeline-line=""><div className="step-timeline__fill" data-step-timeline-fill="" /></div>
@@ -356,12 +310,12 @@ export default function Home() {
       </section>
 
       <section className="section dark-section" id="platform">
-        <div className="section-index">03 / The Platform</div>
+        <div className="section-index">03 / The Website</div>
         <div className="section-content platform-title">
-          <h2>The Platform</h2>
+          <h2>The Website</h2>
           <div className="platform-summary">
-            <p>The proposed ConnectX platform is built around four connected experiences: the customer organising an event, vendors providing event services, venue owners managing their properties, and ConnectX operating the ecosystem between them.</p>
-            <p>The four experiences are connected through a common planning, enquiry, availability and negotiation system.</p>
+            <p>The proposed website will bring together two connected sides of Chef Designs&apos; business: hospitality solutions and professional kitchen products.</p>
+            <p>It is proposed as a corporate and product catalogue website with enquiry-generation capabilities for hospitality businesses, vendors and trade buyers.</p>
           </div>
         </div>
         <div className="scope-list">
@@ -380,34 +334,34 @@ export default function Home() {
         <div className="system-overview" aria-labelledby="system-overview-title">
           <div className="system-overview-heading">
             <span>System overview</span>
-            <h3 id="system-overview-title">The connected ecosystem</h3>
+            <h3 id="system-overview-title">The connected business</h3>
           </div>
           <div className="operations-layer">
             <div className="operations-label">
-              <span>Operational layer</span>
-              <strong>ConnectX Operations</strong>
-              <p>Coordinates &amp; facilitates</p>
+              <span>Business layer</span>
+              <strong>Chef Designs</strong>
+              <p>Showcases &amp; responds</p>
             </div>
             <div className="ecosystem-flow">
               <div className="flow-node flow-customer">
                 <span>01</span>
-                <strong>Customer</strong>
-                <p>Plans &amp; discovers</p>
+                <strong>Hospitality Business</strong>
+                <p>Explores services &amp; expertise</p>
               </div>
               <div className="flow-core">
-                <span>ConnectX</span>
-                <strong>Event planning &amp; vendor ecosystem</strong>
+                <span>Chef Designs</span>
+                <strong>Corporate website &amp; product catalogue</strong>
               </div>
               <div className="flow-branches">
                 <div className="flow-node">
                   <span>02</span>
-                  <strong>Vendor</strong>
-                  <p>Offers &amp; responds</p>
+                  <strong>Products</strong>
+                  <p>Catalogue &amp; RFQ</p>
                 </div>
                 <div className="flow-node">
                   <span>03</span>
-                  <strong>Venue Owner</strong>
-                  <p>Properties &amp; negotiations</p>
+                  <strong>Trade Buyer</strong>
+                  <p>Sourcing &amp; white-labelling</p>
                 </div>
               </div>
             </div>
@@ -416,11 +370,11 @@ export default function Home() {
       </section>
 
       <section className="section blue-section" id="boundaries">
-        <div className="section-index">04 / Phase One Boundaries</div>
+        <div className="section-index">04 / Scope Boundaries</div>
         <div className="section-content boundary-grid">
-          <h2 className="sticky-section-heading">Phase One Boundaries</h2>
+          <h2 className="sticky-section-heading">Scope Boundaries</h2>
           <div>
-            <p className="boundary-lead">Phase One is proposed as the foundation of the ConnectX platform. The system will be structured with future expansion in mind. Any subsequent phase or additional functionality will be scoped and commercialised separately.</p>
+            <p className="boundary-lead">The proposed website is primarily intended as a corporate and product catalogue website with enquiry-generation capabilities. The RFQ functionality is intended to capture enquiries and route them to the Chef Designs team for further discussion. The following are outside the proposed scope:</p>
             <ol className="boundary-list">{boundaries.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol>
           </div>
         </div>
@@ -444,7 +398,7 @@ export default function Home() {
           <div className="pricing-heading">
             <h2>Pricing &amp; Milestones</h2>
             <div className="pricing-summary">
-            <p>The total proposed price for Phase One of this project is <strong>₹10,00,000 + GST.</strong></p>
+            <p>The total proposed project fee is <strong>₹3,50,000 + GST.</strong></p>
             <p>The proposed payment structure consists of three milestones.</p>
             </div>
           </div>
@@ -452,9 +406,9 @@ export default function Home() {
             <caption className="sr-only">Payment milestones</caption>
             <thead><tr className="table-row table-head"><th>Milestone</th><th>Timeline</th><th>Payment</th></tr></thead>
             <tbody>
-              <tr className="table-row"><th>Initiation</th><td>31st August 2026</td><td>₹3,30,000 (33%)</td></tr>
-              <tr className="table-row"><th>Design Sign-off</th><td>Design completion / mid-project</td><td>₹3,30,000 (33%)</td></tr>
-              <tr className="table-row"><th>Project Go-live</th><td>Mid-November 2026</td><td>₹3,40,000 (34%)</td></tr>
+              <tr className="table-row"><th>Initiation</th><td>10th September 2026</td><td>₹1,15,500 (33%)</td></tr>
+              <tr className="table-row"><th>Design Handoff</th><td>Following completion of visual design</td><td>₹1,15,500 (33%)</td></tr>
+              <tr className="table-row"><th>Go-Live</th><td>Approximately 10th November 2026</td><td>₹1,19,000 (34%)</td></tr>
             </tbody>
           </table>
         </div>
@@ -489,7 +443,7 @@ export default function Home() {
         <div className="outro-top">
           <div className="outro-top-right">
             <div className="agency-group">
-              <img src="/placeholder-mark.svg" alt="Studio mark" width="828" height="823" />
+              <img src="/artworksit-logo.png" alt="ArtWorksIT logo" width="828" height="823" />
               <div>
                 <a className="agency-name" href="https://artworksit.com" target="_blank" rel="noopener noreferrer">ArtWorksIT</a>
                 <AgencyDetails />
@@ -501,7 +455,7 @@ export default function Home() {
             </a>
           </div>
           <div className="signatory-group">
-            <img src="/placeholder-signature.svg" alt="Prepared-by signature" width="871" height="477" />
+            <img src="/uday-rathore-signature.png" alt="Uday Rathore signature" width="871" height="477" />
             <div className="signatory-details">
               <div>
                 <span>Prepared by</span>
