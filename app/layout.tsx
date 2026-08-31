@@ -9,19 +9,19 @@ const anton = Anton({ variable: "--font-anton", subsets: ["latin"], weight: "400
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.com"),
-  title: "Chef Designs | Website Proposal",
-  description: "A proposed corporate and product catalogue website for Chef Designs.",
+  title: "Chef Designs | Website Proposal by ArtWorksIT",
+  description: "A website proposal uniting Chef Designs' hospitality solutions, professional kitchen products, project portfolio and trade enquiries.",
   openGraph: {
-    title: "Chef Designs Website Proposal",
-    description: "A proposed corporate and product catalogue website for Chef Designs.",
+    title: "Chef Designs | Website Proposal by ArtWorksIT",
+    description: "A website proposal uniting Chef Designs' hospitality solutions, professional kitchen products, project portfolio and trade enquiries.",
     type: "website",
-    images: [{ url: "/placeholder-hero.svg", width: 1200, height: 630, alt: "Chef Designs website proposal" }],
+    images: [{ url: "/chef-designs-og.jpg", width: 1200, height: 630, alt: "Chef Designs website proposal cover" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chef Designs Website Proposal",
-    description: "A proposed corporate and product catalogue website for Chef Designs.",
-    images: ["/placeholder-hero.svg"],
+    title: "Chef Designs | Website Proposal by ArtWorksIT",
+    description: "A website proposal uniting Chef Designs' hospitality solutions, professional kitchen products, project portfolio and trade enquiries.",
+    images: ["/chef-designs-og.jpg"],
   },
 };
 

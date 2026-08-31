@@ -177,6 +177,8 @@ footer{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:24px;
 @media print{
   @page{size:A4;margin:14mm}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .hero-heading__char,.artworksit-footer-word>span,.section>.section-index,.section>.section-content,.section>.founders-note,.section>.timeline-summary,.section>.parallel-timeline,.stage-list .stage,.scope-list .scope-item,.system-overview,.boundary-list li,.technical-list li,.milestone-table .table-row,.support-list li,.terms-list details,.outro-top,.outro-meta{opacity:1!important;visibility:visible!important;transform:none!important}
+  .hero-heading__word,.hero-heading__char{overflow:visible!important;clip-path:none!important}
   html{scroll-padding-top:0}.section-nav{display:none}.masthead{min-height:52px;padding-inline:0}.section{padding:20mm 0;scroll-margin:0}.section-index{padding-bottom:16px}.section-content{padding-top:28px}
   .hero{min-height:245mm;padding:34mm 0 12mm;break-after:page}.hero-grid{inset-inline:0}.hero-meta{margin-top:40mm}
   .parallel-timeline,.timeline-summary,.stage,.scope-item,.boundary-list li,.technical-list li,.table-row,.support-list li,details{break-inside:avoid}
