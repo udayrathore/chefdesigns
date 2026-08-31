@@ -449,7 +449,7 @@ export default function Home() {
                 <AgencyDetails />
               </div>
             </div>
-            <a className="download-link" href="#" aria-label="Proposal PDF download is not yet available" title="Proposal PDF coming soon">
+            <a className="download-link" href="/chef-designs-website-proposal.pdf" download="Chef-Designs-Website-Proposal.pdf" aria-label="Download the Chef Designs website proposal as a PDF">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 20h14" /></svg>
               <span><small>PDF document</small>Download proposal</span>
             </a>
