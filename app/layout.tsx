@@ -7,8 +7,14 @@ const onest = Onest({ variable: "--font-onest", subsets: ["latin"] });
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const anton = Anton({ variable: "--font-anton", subsets: ["latin"], weight: "400" });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  process.env.VERCEL_PROJECT_PRODUCTION_URL ??
+  process.env.VERCEL_URL ??
+  "http://localhost:3000";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL(siteUrl.startsWith("http") ? siteUrl : `https://${siteUrl}`),
   title: "Chef Designs | Website Proposal by ArtWorksIT",
   description: "A website proposal uniting Chef Designs' hospitality solutions, professional kitchen products, project portfolio and trade enquiries.",
   openGraph: {
