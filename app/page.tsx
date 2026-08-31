@@ -62,54 +62,54 @@ const scheduleTracks = [
 const scopeItems = [
   {
     number: "01",
-    title: "Hospitality Solutions",
-    paragraphs: ["The proposed website will showcase Chef Designs' capabilities across:"],
+    title: "Hospitality & Consulting",
+    paragraphs: ["The proposed website will showcase Chef Designs' expertise across:"],
     list: [
-      "Hotel interiors",
-      "Back-of-house setup",
-      "Kitchen planning and setup",
-      "Consulting",
-      "Kitchen sourcing",
-      "Other proposed hospitality services",
+      "Hospitality interiors",
+      "Back-of-house planning",
+      "Kitchen consulting",
+      "Project execution",
+      "Related hospitality services",
     ],
     closingParagraphs: [
-      "A dedicated projects and portfolio section will allow Chef Designs to demonstrate relevant work and experience.",
+      "Visitors will be able to understand individual services, explore the company's capabilities and view relevant projects.",
     ],
   },
   {
     number: "02",
-    title: "Products & Trade",
+    title: "Kitchen & Hospitality Products",
     paragraphs: [
-      "The proposed website will include a structured catalogue of Chef Designs' professional kitchen products.",
-      "Products will be organised into relevant categories, and individual product pages will allow visitors to explore product information, imagery, specifications and other relevant details.",
+      "A dedicated product catalogue will showcase professional kitchen equipment, crockery, boards and other hospitality products.",
+      "Products will be organised into clear categories, with individual product pages containing relevant imagery, specifications and product information.",
     ],
     closingParagraphs: [
-      "The proposed catalogue is intended to support a large and growing product range.",
+      "The catalogue will be structured to accommodate new products and categories as the business grows.",
     ],
   },
   {
     number: "03",
-    title: "RFQ & Product Enquiries",
+    title: "Enquiries & RFQs",
     paragraphs: [
-      "Visitors will be able to explore products and submit enquiries for specific products.",
-      "The proposed RFQ flow will allow visitors to identify the products they are interested in and submit their contact details and requirements. These enquiries will be routed to the designated Chef Designs email or inbox.",
-      "This is an enquiry-generation system, not an e-commerce system.",
+      "The proposed website is not an e-commerce website. It will not include cart, checkout or online payment functionality.",
+      "Visitors will be able to select products they are interested in and submit an RFQ or enquiry to the Chef Designs team.",
+      "The team can then respond with relevant pricing, availability and recommendations.",
     ],
   },
   {
     number: "04",
-    title: "White-Label / Trade Enquiries",
+    title: "Trade & White-Label Opportunities",
     paragraphs: [
-      "The proposed website will provide a clear pathway for vendors and businesses interested in sourcing or white-labelling Chef Designs' products.",
-      "Visitors will be able to enquire about relevant products and commercial opportunities directly through the proposed website.",
+      "The proposed website will provide a clear pathway for businesses with product sourcing, trade requirements or white-label opportunities.",
+      "Visitors will be able to submit an enquiry and connect directly with the Chef Designs team.",
     ],
   },
   {
     number: "05",
-    title: "WhatsApp Integration",
+    title: "A Single Platform for the Complete Business",
     paragraphs: [
-      "WhatsApp is proposed as a supporting enquiry channel at relevant points across the website, particularly for product and general enquiries.",
-      "It will remain a supporting touchpoint rather than a visually prominent feature.",
+      "The proposed website will serve as one cohesive digital presence for the complete Chef Designs business.",
+      "It will bring the full range of Chef Designs' capabilities together within one clear information architecture.",
+      "Visitors will be able to enter through the service, product or requirement most relevant to them while still understanding the broader scope of the business.",
     ],
   },
 ];
@@ -314,8 +314,8 @@ export default function Home() {
         <div className="section-content platform-title">
           <h2>The Website</h2>
           <div className="platform-summary">
-            <p>The proposed website will bring together two connected sides of Chef Designs&apos; business: hospitality solutions and professional kitchen products.</p>
-            <p>It is proposed as a corporate and product catalogue website with enquiry-generation capabilities for hospitality businesses, vendors and trade buyers.</p>
+            <p>The proposed website will serve as the digital presence for the entire Chef Designs business, bringing its complete range of hospitality solutions, consulting services, interior expertise, kitchen solutions and professional products under one cohesive platform.</p>
+            <p>The website will present Chef Designs as a comprehensive hospitality partner rather than separating the business into distinct services.</p>
           </div>
         </div>
         <div className="scope-list">
@@ -334,34 +334,34 @@ export default function Home() {
         <div className="system-overview" aria-labelledby="system-overview-title">
           <div className="system-overview-heading">
             <span>System overview</span>
-            <h3 id="system-overview-title">The connected business</h3>
+            <h3 id="system-overview-title">One platform for the complete business</h3>
           </div>
           <div className="operations-layer">
             <div className="operations-label">
               <span>Business layer</span>
               <strong>Chef Designs</strong>
-              <p>Showcases &amp; responds</p>
+              <p>Presents &amp; responds</p>
             </div>
             <div className="ecosystem-flow">
               <div className="flow-node flow-customer">
                 <span>01</span>
-                <strong>Hospitality Business</strong>
-                <p>Explores services &amp; expertise</p>
+                <strong>Visitors &amp; Businesses</strong>
+                <p>Enter by service, product or requirement</p>
               </div>
               <div className="flow-core">
                 <span>Chef Designs</span>
-                <strong>Corporate website &amp; product catalogue</strong>
+                <strong>Complete digital presence</strong>
               </div>
               <div className="flow-branches">
                 <div className="flow-node">
                   <span>02</span>
-                  <strong>Products</strong>
-                  <p>Catalogue &amp; RFQ</p>
+                  <strong>Services &amp; Projects</strong>
+                  <p>Hospitality, consulting &amp; interiors</p>
                 </div>
                 <div className="flow-node">
                   <span>03</span>
-                  <strong>Trade Buyer</strong>
-                  <p>Sourcing &amp; white-labelling</p>
+                  <strong>Products &amp; Enquiries</strong>
+                  <p>Catalogue, RFQs &amp; trade</p>
                 </div>
               </div>
             </div>
