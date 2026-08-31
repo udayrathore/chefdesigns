@@ -24,8 +24,9 @@
     const scaleDownImages = Array.from(overlay.querySelectorAll(".crisp-loader__cover-img.is--scale-down"));
     const selectedMedia = overlay.querySelector(".crisp-loader__media.is--scaling");
     const groups = overlay.querySelector(".crisp-loader__groups");
+    const wrap = overlay.querySelector(".crisp-loader__wrap");
 
-    if (!duplicateTiles.length || !relativeTiles.length || !selectedMedia || !groups) {
+    if (!duplicateTiles.length || !relativeTiles.length || !selectedMedia || !groups || !wrap) {
       overlay.style.display = "none";
       signalReady();
       return;
@@ -66,6 +67,8 @@
         stagger: { each: 0.045, from: "edges", ease: "none" },
       }, "-=0.18")
       .call(lockSelectedMedia)
+      .addLabel("hero-expand")
+      .to(wrap, { autoAlpha: 0, duration: 0.22, ease: "power1.out" }, "hero-expand")
       .to(selectedMedia, {
         left: 0,
         top: 0,
@@ -73,7 +76,7 @@
         height: "100dvh",
         borderRadius: 0,
         duration: 1.25,
-      })
+      }, "hero-expand")
       .to(overlay, { autoAlpha: 0, duration: 0.42, ease: "power1.inOut" }, ">-=0.05")
       .call(signalReady)
       .set(overlay, { display: "none" });

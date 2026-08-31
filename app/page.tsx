@@ -240,7 +240,7 @@ export default function Home() {
         <div className="hero-meta">
           <div><span>Prepared by</span><strong>ArtWorksIT</strong></div>
           <div><span>Project start</span><strong>10th September 2026</strong></div>
-          <div><span>Project completion</span><strong>Approximately 10th November 2026</strong></div>
+          <div><span>Project completion</span><strong>10th November 2026</strong></div>
           <div><span>Project timeline</span><strong>2 months</strong></div>
         </div>
       </section>
@@ -255,11 +255,11 @@ export default function Home() {
             <p className="lead">Chef Designs is a hospitality-focused company working across hotel interiors, back-of-house setup, consulting, kitchen solutions and the manufacture and sale of professional kitchen products.</p>
             <p>The proposed website will bring these capabilities together under one umbrella website, allowing Chef Designs to showcase its expertise to hospitality businesses while also presenting its product range to vendors and businesses interested in sourcing and white-labelling these products.</p>
             <p>The proposed website will serve two primary audiences: hospitality businesses looking for Chef Designs&apos; services and expertise, and vendors and businesses interested in sourcing or white-labelling Chef Designs&apos; products.</p>
+            <div className="founders-note">
+              <span>Client contact</span>
+              <p>Vishal Sharma</p>
+            </div>
           </div>
-        </div>
-        <div className="founders-note">
-          <span>Client contact</span>
-          <p>Vishal Sharma</p>
         </div>
       </section>
 
@@ -271,10 +271,10 @@ export default function Home() {
         </div>
         <div className="timeline-summary">
           <div><span>Proposed project start</span><strong>10th September 2026</strong></div>
-          <div><span>Proposed project completion</span><strong>Approximately 10th November 2026</strong></div>
+          <div><span>Proposed project completion</span><strong>10th November 2026</strong></div>
           <div><span>Project timeline</span><strong>2 months</strong></div>
         </div>
-        <div className="parallel-timeline" aria-label="Proposed project schedule from 10 September to approximately 10 November 2026">
+        <div className="parallel-timeline" aria-label="Proposed project schedule from 10 September to 10 November 2026">
           <div className="schedule-scroll">
             <div className="schedule-chart">
               <div className="schedule-corner">Phase</div>
@@ -408,7 +408,7 @@ export default function Home() {
             <tbody>
               <tr className="table-row"><th>Initiation</th><td>10th September 2026</td><td>₹1,15,500 (33%)</td></tr>
               <tr className="table-row"><th>Design Handoff</th><td>Following completion of visual design</td><td>₹1,15,500 (33%)</td></tr>
-              <tr className="table-row"><th>Go-Live</th><td>Approximately 10th November 2026</td><td>₹1,19,000 (34%)</td></tr>
+              <tr className="table-row"><th>Go-Live</th><td>10th November 2026</td><td>₹1,19,000 (34%)</td></tr>
             </tbody>
           </table>
         </div>
