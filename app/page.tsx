@@ -225,16 +225,15 @@ export default function Home() {
       <main>
       <header className="masthead">
         <a className="logo-link" href="#top" aria-label="Chef Designs proposal home"><Logo /></a>
-        <p>Proposal</p>
         <p className="masthead-date">31 August 2026</p>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-grid" aria-hidden="true"><span /><span /><span /><span /></div>
         <div className="hero-copy">
-          <p className="eyebrow">Proposed</p>
+          <p className="eyebrow">Proposal For</p>
           <h1 data-hero-heading>
-            Hospitality<br className="hero-break-mobile" /> Solutions &amp;<br className="hero-break-desktop" /> Professional<br className="hero-break-mobile" /> Kitchen Products
+            Hospitality<br className="hero-break-mobile" /> Solutions &amp;<br className="hero-break-desktop" /> Professional<br className="hero-break-mobile" /> Kitchen Products website
           </h1>
         </div>
         <div className="hero-meta">
