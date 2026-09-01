@@ -9,10 +9,10 @@ const stages = [
     title: "Research",
     duration: "1 week",
     paragraphs: [
-      "We will study Chef Designs' ideal clientele, competitors and the broader market in which the company operates.",
-      "This will help us understand how similar businesses position themselves, what works within the category and what opportunities exist for the proposed website.",
+      "We will study Chef Designs' business, services, products, audiences, competitors and wider hospitality market context.",
+      "This will help us understand what different visitors need to know, what actions they should be able to take and how the website should present the breadth of the business clearly.",
     ],
-    deliverable: "Research findings and proposed positioning direction.",
+    deliverable: "Research findings, audience needs and proposed positioning direction.",
   },
   {
     number: "02",
@@ -20,10 +20,10 @@ const stages = [
     title: "Wireframing & User Experience",
     duration: "1 week",
     paragraphs: [
-      "We will define the sitemap, page structure, wireframes, user flows and key user journeys.",
-      "This will help establish how different audiences should navigate the proposed website and how the service and product sides of the business should work together.",
+      "We will define the sitemap, content hierarchy, navigation, page structure, wireframes and key user flows.",
+      "This will determine what information appears where and help hospitality clients, product buyers and trade contacts find relevant information and understand what they can do next.",
     ],
-    deliverable: "Proposed sitemap, wireframes and user-flow definitions.",
+    deliverable: "Proposed sitemap, content structure, wireframes and user-flow definitions.",
   },
   {
     number: "03",
@@ -31,8 +31,9 @@ const stages = [
     title: "Visual Design",
     duration: "2 weeks",
     paragraphs: [
-      "Based on the proposed structure and wireframes, we will develop the visual direction and interface design in Figma.",
-      "This will cover the proposed website's typography, layout, visual hierarchy, imagery, product presentation and responsive behaviour.",
+      "Once the website structure is established, we will develop the visual direction and responsive interface design in Figma.",
+      "Design decisions will consider information hierarchy, readability, navigation, content structure, product presentation, responsive behaviour and visual consistency.",
+      "The interface will make the website clear and easy to use while communicating the quality and nature of Chef Designs' work in a distinctive and memorable way.",
       "The project includes up to four consolidated rounds of design revisions.",
     ],
     deliverable: "High-fidelity responsive interface designs in Figma.",
@@ -43,10 +44,10 @@ const stages = [
     title: "Development & Testing",
     duration: "4 weeks",
     paragraphs: [
-      "Once the proposed designs are confirmed for development, we will proceed with responsive website development, implementation of the product catalogue and enquiry workflows, and the proposed CMS functionality.",
-      "The proposed website will be deployed to a staging environment for User Acceptance Testing before launch.",
+      "Once the designs are approved, we will proceed with responsive website development, the product catalogue, enquiry and RFQ forms, and the approved content-management functionality.",
+      "The website will be deployed to a staging environment for functional, responsive and browser testing, followed by Client review before launch.",
     ],
-    deliverable: "Responsive proposed website on a staging environment for testing.",
+    deliverable: "Responsive website on a staging environment for testing and Client review.",
   },
 ];
 
@@ -62,54 +63,64 @@ const scheduleTracks = [
 const scopeItems = [
   {
     number: "01",
-    title: "Hospitality & Consulting",
-    paragraphs: ["The proposed website will showcase Chef Designs' expertise across:"],
+    title: "Hospitality Services & Consulting",
+    paragraphs: ["The website will present Chef Designs' capabilities across the hospitality sector, including:"],
     list: [
-      "Hospitality interiors",
-      "Back-of-house planning",
-      "Kitchen consulting",
-      "Project execution",
-      "Related hospitality services",
+      "Hotel interiors",
+      "Back-of-house setup",
+      "Kitchen planning and setup",
+      "Consulting",
+      "Kitchen sourcing",
+      "Other hospitality services confirmed as part of the project",
     ],
     closingParagraphs: [
-      "Visitors will be able to understand individual services, explore the company's capabilities and view relevant projects.",
+      "This area will help potential hospitality clients understand what Chef Designs can help them with and explore relevant capabilities and projects.",
     ],
   },
   {
     number: "02",
-    title: "Kitchen & Hospitality Products",
+    title: "Projects & Experience",
     paragraphs: [
-      "A dedicated product catalogue will showcase professional kitchen equipment, crockery, boards and other hospitality products.",
-      "Products will be organised into clear categories, with individual product pages containing relevant imagery, specifications and product information.",
-    ],
-    closingParagraphs: [
-      "The catalogue will be structured to accommodate new products and categories as the business grows.",
+      "Relevant projects and completed work will be presented to help visitors understand Chef Designs' experience and capabilities.",
+      "Project information will be organised so visitors can connect the work shown with the services or requirements relevant to them.",
     ],
   },
   {
     number: "03",
-    title: "Enquiries & RFQs",
+    title: "Professional Kitchen Products",
     paragraphs: [
-      "The proposed website is not an e-commerce website. It will not include cart, checkout or online payment functionality.",
-      "Visitors will be able to select products they are interested in and submit an RFQ or enquiry to the Chef Designs team.",
-      "The team can then respond with relevant pricing, availability and recommendations.",
+      "The product catalogue will be a practical discovery tool, not simply a list of products. Visitors will be able to browse relevant categories, understand what each product is and identify products that may suit their requirements.",
+      "Product pages will present available imagery, specifications and relevant information supplied by Chef Designs, with a clear route to enquire.",
+    ],
+    list: [
+      "Clear product categorisation",
+      "Product discovery and information",
+      "Product imagery and specifications",
+      "Product enquiries and RFQ submission",
     ],
   },
   {
     number: "04",
-    title: "Trade & White-Label Opportunities",
+    title: "Product Enquiries & RFQs",
     paragraphs: [
-      "The proposed website will provide a clear pathway for businesses with product sourcing, trade requirements or white-label opportunities.",
-      "Visitors will be able to submit an enquiry and connect directly with the Chef Designs team.",
+      "This is not an e-commerce website. There will be no shopping cart, checkout, online payment, automated ordering, customer account system or e-commerce order management.",
+      "Visitors can explore products and submit an enquiry or RFQ for products they are interested in. The form can capture relevant contact details and requirements and route the enquiry to the Chef Designs team for a response.",
     ],
   },
   {
     number: "05",
-    title: "A Single Platform for the Complete Business",
+    title: "Trade & White-Label Enquiries",
     paragraphs: [
-      "The proposed website will serve as one cohesive digital presence for the complete Chef Designs business.",
-      "It will bring the full range of Chef Designs' capabilities together within one clear information architecture.",
-      "Visitors will be able to enter through the service, product or requirement most relevant to them while still understanding the broader scope of the business.",
+      "Businesses interested in sourcing products, discussing trade requirements or exploring white-label opportunities will have a clear way to contact Chef Designs.",
+      "The website will capture the initial enquiry and relevant requirement without introducing a separate account area or automated workflow.",
+    ],
+  },
+  {
+    number: "06",
+    title: "Supporting Contact Channels",
+    paragraphs: [
+      "Clear contact forms will provide the primary routes for service, product, RFQ, trade and white-label enquiries.",
+      "WhatsApp may be used as a supporting contact option where it is appropriate for the visitor and enquiry type.",
     ],
   },
 ];
@@ -126,9 +137,10 @@ const boundaries = [
 
 const technical = [
   "Laravel",
+  "Nuxt.js",
   "TailwindCSS",
   "GSAP",
-  "Supporting JavaScript technologies",
+  "MySQL, where applicable",
 ];
 
 const loaderImages = [
@@ -140,16 +152,17 @@ const loaderImages = [
 ];
 
 const support = [
-  "The proposed scope includes one month of post-launch bug-fix support.",
-  "Bugs are issues where delivered functionality deviates from the proposed design or proposed scope.",
-  "New features, enhancements or additional development are outside the proposed scope and will be scoped separately.",
-  "ArtWorksIT proposes to recommend, configure and manage the hosting infrastructure based on the proposed website's load, requirements and assets. The appropriate server environment will be assessed as part of the implementation.",
+  "ArtWorksIT will recommend, configure and manage the hosting environment required for the website. Hosting for the first 12 months after launch is included in the project fee of ₹3,50,000 + GST.",
+  "The proposed scope also includes one month of post-launch bug-fix support for delivered functionality that does not operate as defined in the approved design or scope.",
+  "From the second year onwards, hosting and maintenance will be charged at ₹35,000 per year, which is 10% of the proposed project fee.",
+  "The annual service includes hosting management, basic website health checks, routine maintenance needed to keep the delivered website and hosting environment operational, and basic troubleshooting related to the delivered website.",
+  "Maintenance covers routine upkeep of the delivered website. New features, substantial changes, redesigns, new modules, major integrations and functionality outside the approved scope will be quoted separately.",
 ];
 
 const terms = [
   {
     title: "Project Deliverables & Code Ownership",
-    body: "ArtWorksIT assures that all code and design components created for the Client's platform are original and tailored to the project's requirements. Code and documentation will be versioned and securely managed through GitHub, providing Client access to code versions and updates as needed. Upon full payment, the Client will have ownership of the custom website or application code, design files and project-specific deliverables created by ArtWorksIT, excluding third-party software, libraries, frameworks, fonts, plugins, stock assets and other components subject to their respective licences. ArtWorksIT reserves the right to showcase the completed project in its portfolio and marketing materials unless otherwise agreed upon in writing.",
+    body: "ArtWorksIT assures that all custom code and design components created for the Client's website will be original and tailored to the project's requirements. Code and documentation will be versioned and securely managed through GitHub, with Client access to code versions and updates as needed. Upon full payment, the Client will own the custom website code, design files and project-specific deliverables created by ArtWorksIT. Third-party software, libraries, frameworks, fonts, plugins, stock assets and other components governed by their own licences are excluded from this ownership. ArtWorksIT reserves the right to showcase the completed project in its portfolio and marketing materials unless otherwise agreed in writing.",
   },
   {
     title: "Confidentiality & Data Security",
@@ -157,11 +170,11 @@ const terms = [
   },
   {
     title: "Client Responsibilities & Project Scope",
-    body: "The Client is responsible for providing all necessary project details, business rules, content, vendor information and timely feedback required for the project. The Client will provide timely access to relevant stakeholders for product decisions, approvals and clarification of workflows. Delays in requirements, content, approvals, feedback or other Client dependencies may result in corresponding changes to the project timeline.",
+    body: "The Client is responsible for providing final content, required business information, product information, product images, specifications and other assets needed for the website. The Client will provide timely feedback, approvals and access to relevant stakeholders for decisions and clarification. Delays in requirements, content, approvals, feedback or other Client dependencies may result in corresponding changes to the project timeline.",
   },
   {
     title: "Payment Terms & Financial Conditions",
-    body: "All payments are due Net 7 days from the invoice date, and all prices are exclusive of GST. The total project fee excludes costs for external services that may be required. Work will begin once the initial payment is received. If there are delays in payments, work may be paused temporarily and resumed once outstanding payments are cleared. The platform will be scheduled for go-live upon receipt of the applicable go-live stage payment.",
+    body: "All payments are due Net 7 days from the invoice date, and all prices are exclusive of GST. The project fee includes website hosting for the first 12 months after launch. Any additional third-party cost outside the approved scope will be discussed with the Client before it is incurred. Work will begin once the initial payment is received. If payments are delayed, work may be paused and resumed once outstanding payments are cleared. The website will be scheduled for go-live upon receipt of the applicable go-live stage payment.",
   },
   {
     title: "Termination, Dispute Resolution & Governing Law",
@@ -173,7 +186,7 @@ const terms = [
   },
   {
     title: "Assumptions",
-    body: "The Client is responsible for providing the final requirements, business rules, content guidelines and necessary assets. Data entry and migration of extensive product, project or service data will be the responsibility of the Client unless specifically included in the proposed scope. Hosting and infrastructure management will be defined as part of the proposed implementation and commercial arrangement. Functionality not explicitly included in the proposed scope may be considered for a subsequent phase.",
+    body: "The Client will provide final requirements, business rules, content, product information, product images, specifications and necessary assets, together with timely feedback and approvals. Extensive data entry or migration of product, project or service information is the Client's responsibility unless specifically included in the approved scope. ArtWorksIT will manage hosting, with the first 12 months after launch included in the project fee. From the second year onwards, hosting and maintenance will be available at ₹35,000 per year. New functionality outside the approved scope will be quoted separately.",
   },
 ];
 
@@ -196,7 +209,7 @@ function DeliverableIcon({ stage }: { stage: string }) {
 export default function Home() {
   return (
     <>
-      <div data-load-wrap className="crisp-loader-overlay is--hidden" aria-hidden="true">
+      <div data-load-wrap className="crisp-loader-overlay" aria-hidden="true">
         <div className="crisp-loader__wrap">
           <div className="crisp-loader__groups">
             <div className="crisp-loader__group is--duplicate">
@@ -251,9 +264,9 @@ export default function Home() {
         <div className="section-content intro-grid">
           <h2>Project Objective</h2>
           <div className="measure">
-            <p className="lead">Chef Designs is a hospitality-focused company working across hotel interiors, back-of-house setup, consulting, kitchen solutions and the manufacture and sale of professional kitchen products.</p>
-            <p>The proposed website will bring these capabilities together under one umbrella website, allowing Chef Designs to showcase its expertise to hospitality businesses while also presenting its product range to vendors and businesses interested in sourcing and white-labelling these products.</p>
-            <p>The proposed website will serve two primary audiences: hospitality businesses looking for Chef Designs&apos; services and expertise, and vendors and businesses interested in sourcing or white-labelling Chef Designs&apos; products.</p>
+            <p className="lead">Chef Designs is a hospitality solutions business with expertise across services, consulting and professional kitchen products. The proposed website will bring this complete offering together in one clear and accessible digital presence.</p>
+            <p>The website is intended to give Chef Designs a credible digital presence, make its full range of capabilities easier to understand and help potential hospitality clients discover how the company may support their requirements.</p>
+            <p>It will also organise and present the professional product range so potential buyers, vendors and businesses can find relevant products, review available information and submit product, sourcing, RFQ or white-label enquiries. Across the website, visitors should be able to understand what Chef Designs does and what they can do next.</p>
             <div className="founders-note">
               <span>Client contact</span>
               <p>Vishal Sharma</p>
@@ -266,7 +279,7 @@ export default function Home() {
         <div className="section-index">02 / Project Scope &amp; Timelines</div>
         <div className="section-content section-heading">
           <h2>Project Scope &amp; Timelines</h2>
-          <p>We propose a structured process that brings the service and product sides of Chef Designs together within one clear, responsive website experience.</p>
+          <p>We will first understand the business, its audiences and the information they need. That understanding will guide the website structure, navigation, content hierarchy, product presentation and visual design.</p>
         </div>
         <div className="timeline-summary">
           <div><span>Proposed project start</span><strong>10th September 2026</strong></div>
@@ -308,13 +321,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section dark-section" id="platform">
+      <section className="section dark-section" id="website">
         <div className="section-index">03 / The Website</div>
-        <div className="section-content platform-title">
+        <div className="section-content website-title">
           <h2>The Website</h2>
-          <div className="platform-summary">
-            <p>The proposed website will serve as the digital presence for the entire Chef Designs business, bringing its complete range of hospitality solutions, consulting services, interior expertise, kitchen solutions and professional products under one cohesive platform.</p>
-            <p>The website will present Chef Designs as a comprehensive hospitality partner rather than separating the business into distinct services.</p>
+          <div className="website-summary">
+            <p>The proposed website will serve as the digital presence for the complete Chef Designs business, bringing its hospitality services, consulting capabilities, kitchen solutions and professional products together under one clear website.</p>
+            <p>Information will be organised around the needs of different visitors without fragmenting the business. People will be able to enter through a relevant service, project, product or enquiry route while still understanding the wider Chef Designs offering.</p>
           </div>
         </div>
         <div className="scope-list">
@@ -332,35 +345,50 @@ export default function Home() {
         </div>
         <div className="system-overview" aria-labelledby="system-overview-title">
           <div className="system-overview-heading">
-            <span>System overview</span>
-            <h3 id="system-overview-title">One platform for the complete business</h3>
+            <span>Website overview</span>
+            <h3 id="system-overview-title">One digital presence for the complete business</h3>
           </div>
           <div className="operations-layer">
             <div className="operations-label">
-              <span>Business layer</span>
+              <span>Business</span>
               <strong>Chef Designs</strong>
-              <p>Presents &amp; responds</p>
+              <p>One complete hospitality offering</p>
             </div>
-            <div className="ecosystem-flow">
+            <div className="website-flow">
               <div className="flow-node flow-customer">
                 <span>01</span>
-                <strong>Visitors &amp; Businesses</strong>
-                <p>Enter by service, product or requirement</p>
+                <strong>Chef Designs</strong>
+                <p>Hospitality services, consulting and products</p>
               </div>
               <div className="flow-core">
-                <span>Chef Designs</span>
+                <span>Website</span>
                 <strong>Complete digital presence</strong>
               </div>
               <div className="flow-branches">
                 <div className="flow-node">
                   <span>02</span>
-                  <strong>Services &amp; Projects</strong>
-                  <p>Hospitality, consulting &amp; interiors</p>
+                  <strong>Services &amp; Consulting</strong>
+                  <p>Hospitality capabilities</p>
                 </div>
                 <div className="flow-node">
                   <span>03</span>
-                  <strong>Products &amp; Enquiries</strong>
-                  <p>Catalogue, RFQs &amp; trade</p>
+                  <strong>Products</strong>
+                  <p>Catalogue &amp; discovery</p>
+                </div>
+                <div className="flow-node">
+                  <span>04</span>
+                  <strong>Projects &amp; Experience</strong>
+                  <p>Relevant work &amp; capabilities</p>
+                </div>
+                <div className="flow-node">
+                  <span>05</span>
+                  <strong>Product Enquiries &amp; RFQs</strong>
+                  <p>Requirements sent to the team</p>
+                </div>
+                <div className="flow-node">
+                  <span>06</span>
+                  <strong>Trade &amp; White-Label</strong>
+                  <p>Business enquiries</p>
                 </div>
               </div>
             </div>
@@ -373,7 +401,7 @@ export default function Home() {
         <div className="section-content boundary-grid">
           <h2 className="sticky-section-heading">Scope Boundaries</h2>
           <div>
-            <p className="boundary-lead">The proposed website is primarily intended as a corporate and product catalogue website with enquiry-generation capabilities. The RFQ functionality is intended to capture enquiries and route them to the Chef Designs team for further discussion. The following are outside the proposed scope:</p>
+            <p className="boundary-lead">The proposed scope is a corporate website for the complete Chef Designs business, with a structured product catalogue and enquiry functionality. Product and RFQ forms will capture relevant requirements and route them to the Chef Designs team for further discussion. The following are outside the proposed scope:</p>
             <ol className="boundary-list">{boundaries.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol>
           </div>
         </div>
@@ -398,7 +426,7 @@ export default function Home() {
             <h2>Pricing &amp; Milestones</h2>
             <div className="pricing-summary">
             <p>The total proposed project fee is <strong>₹3,50,000 + GST.</strong></p>
-            <p>The proposed payment structure consists of three milestones.</p>
+            <p>The proposed payment structure consists of three milestones. Website hosting for the first 12 months after launch is included in this fee. The annual hosting and maintenance fee of ₹35,000 applies only after the first 12 months and is not included in the project total.</p>
             </div>
           </div>
           <table className="milestone-table">
